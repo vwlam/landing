@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>App Landing Page</title>
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <script src="https://unpkg.com/vue@3.0.10/dist/vue.global.prod.js"></script>
+      <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+      <meta content="utf-8" http-equiv="encoding">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+   </head>
+   <body>
+      <div id="lang">
+         <div :class="service">
+            <section id="section1">
+               <figure id="logo"><img src="./assets/icon.png" alt="" width="24" height="24"></figure>
+               <figure><img id="img1" src="./assets/img1.png" alt="" width="267" height="456"></figure>
+               <div class="wrapper">
+                  <h1>{{ latest_news }}</h1>
+               </div>
+               <a class="btn" :href="download">
+                  {{ go }}</a>
+               <h6>{{ help_installing }}
+                  <a href="#android">Android</a>
+                  or
+                  <a href="#ios">iOS</a>?</h6>
+            </section>
+            <section>
+               <div id="android">
+                  <h4 class="sectionhead"><img class="icon" src="./assets/icon-android.svg">
+                     {{ android_header }}</h4>
+                  <div class="gif">
+                     <figure><img data-gifffer="./assets/android.gif"/></figure>
+                  </div>
+               </div>
+               <ol class="text">
+                  <li>{{ android_1 }}</li>
+                  <li>{{ android_2 }}</li>
+               </ol>
+               <a class="btn" :href="download">{{ go }}</a>
+            </section>
+            <section>
+               <div id="ios">
+                  <h4 class="sectionhead">
+                     <img class="icon" src="./assets/icon-apple.svg">{{ apple_header }}</h4>
+                  <div class="gif">
+                     <figure><img data-gifffer="./assets/ios.gif" width-gifffer="80%"/></figure>
+                  </div>
+               </div>
+               <ol class="text">
+                  <li>{{ apple_1 }}</li>
+                  <li>{{ apple_2 }}</li>
+                  <li>{{ apple_3 }}</li>
+                  <li>{{ apple_4 }}</li>
+               </ol>
+               <a class="btn" :href="download">{{ go }}</a>
+            </section>
+         </div>
+      </div>
+      <script src="./js/translations.js"></script>
+      <script type="text/javascript" src="./js/gifffer.min.js"></script>
+      <script type="text/javascript">
+         window.onload = function () {
+            var gifs = Gifffer({
+               playButtonStyles: {
+                  'width': '60px',
+                  'height': '60px',
+                  'border-radius': '30px',
+                  'background': 'rgba(0, 0, 0, 0.4)',
+                  'position': 'absolute',
+                  'top': '50%',
+                  'left': '50%',
+                  'margin': '-30px 0 0 -30px'
+               },
+               playButtonIconStyles: {
+                  'width': '0',
+                  'height': '0',
+                  'border-top': '10px solid transparent',
+                  'border-bottom': '10px solid transparent',
+                  'border-left': '16px solid rgba(245, 245, 245, 0.8)',
+                  'position': 'absolute',
+                  'left': '25px',
+                  'top': '20px'
+               }
+            });
+         }
+      </script>
+   </body>
+</html>
