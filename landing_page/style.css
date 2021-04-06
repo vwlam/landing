@@ -194,14 +194,14 @@ section {
 }
 
 @media screen and (max-width: 320px) {
-   section {
-      justify-content: center;
-   }
-
    .text {
       font-size: .9em!important;
-      margin: 0 .9em .9em .9em!important;
-      padding-inline-start: 10px;
+      margin:1em .9em 0 0!important;
+      padding-inline-start: 15px;
+   }
+
+   figure.gif {
+      margin-top: -1em!important;
    }
 
    a.btn {
@@ -224,7 +224,7 @@ section {
    .gif_bcg {
       background-image: radial-gradient(circle, #e7e7e7, #dddddd, #d3d3d3, #c9c9c9, #bfbfbf);
       width: 100%;
-      max-height: 50vh;
+      max-height: 40vh;
       margin-top: 2em;
       min-width: 320px;
    }
@@ -244,7 +244,7 @@ section {
 
    .wrapper {
       margin: 0 auto;
-      width: 90%;
+      width: 80%;
       font-weight: 300;
       display: inline;
    }
@@ -306,8 +306,8 @@ section {
    .text {
       font-family: var(--font-family-secondary);
       font-size: var(--font-size-normal);
-      margin: 1.5rem 2rem 1.5rem 0;
-      max-height: 40vh;
+      margin: 1.75rem 2rem 0 0;
+      max-height: 35vh;
    }
 
    .text li {
