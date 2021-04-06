@@ -17,12 +17,12 @@
                <div class="wrapper">
                   <h1>{{ latest_news }}</h1>
                </div>
-               <a class="btn" :href="download">
-                  {{ go }}</a>
-               <h6>{{ help_installing }}
-                  <a href="#android">Android</a>
-                  or
-                  <a href="#ios">iOS</a>?</h6>
+               <a class="btn" :href="download">{{ go }}</a>
+               <div id="install">
+                  <h6>{{ help_installing }}</h6>
+                  <a id="scroll" href="#android">
+                  <span></span></a>
+               </div>
             </section>
             <section>
                <div id="android">
@@ -33,26 +33,26 @@
                      <figure class="gif"><img data-gifffer="./assets/android.gif" data-gifffer-height="75%"/></figure>
                   </div>
                </div>
-                  <ol class="text">
-                     <li>{{ android_1 }}</li>
-                     <li>{{ android_2 }}</li>
-                  </ol>
-                  <a class="btn" :href="download">{{ go }}</a>
+               <ol class="text">
+                  <li>{{ android_1 }}</li>
+                  <li>{{ android_2 }}</li>
+               </ol>
+               <a class="btn" :href="download">{{ go }}</a>
             </section>
             <section>
                <div id="ios">
                   <div class="gif_bcg">
                      <h4 class="sectionhead"><img class="icon" src="./assets/icon-apple.svg">{{ apple_header }}</h4>
-                     <figure class="gif"><img data-gifffer="./assets/ios.gif"data-gifffer-height="70%"/></figure>
+                     <figure class="gif"><img data-gifffer="./assets/ios.gif" data-gifffer-height="70%"/></figure>
                   </div>
                </div>
-                  <ol class="text">
-                     <li>{{ apple_1 }}</li>
-                     <li>{{ apple_2 }}</li>
-                     <li>{{ apple_3 }}</li>
-                     <li>{{ apple_4 }}</li>
-                  </ol>
-                  <a class="btn" :href="download">{{ go }}</a>
+               <ol class="text">
+                  <li>{{ apple_1 }}</li>
+                  <li>{{ apple_2 }}</li>
+                  <li>{{ apple_3 }}</li>
+                  <li>{{ apple_4 }}</li>
+               </ol>
+               <a class="btn" :href="download">{{ go }}</a>
 
             </section>
          </div>
@@ -84,6 +84,16 @@
                }
             });
          }
+      </script>
+      <script>
+         $(function () {
+            $('a[href*=#]').on('click', function (e) {
+               e.preventDefault();
+               $('html, body').animate({
+                  scrollTop: $($(this).attr('href')).offset().top
+               }, 500, 'linear');
+            });
+         });
       </script>
    </body>
 </html>

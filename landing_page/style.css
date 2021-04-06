@@ -6,25 +6,27 @@
    --color-rfa-green: #148943;
    --color-text: #3F4140;
    --color-bcg: #F3F3F3;
+   --font-family-main: 'Roboto', sans-serif;
 }
-
+/*service styles*/
 .english {
    --font-family-main: 'Roboto', sans-serif;
    --font-family-secondary: 'Roboto Condensed', sans-serif;
    /*font-sizes*/
    --font-size-main: min(max(14px, 4vw), 22px);
-   --font-flow: 100%/1.618;
+   --line-height: 1.618;
    --font-size-large: 1.4em;
    --font-size-normal: 1em;
-   --font-size-medium: .7em;
+   --font-size-medium: .9em;
    --font-size-small: .6em;
 }
 
 .mandarin {
    --font-family-main: "Microsoft YaHei";
+   --font-family-secondary: "Microsoft YaHei";
    /*font-sizes*/
    --font-size-main: min(max(14px, 4vw), 22px);
-   --font-flow: 100%/1.618;
+   --line-height: 1.618;
    --font-size-large: 1.5em;
    --font-size-normal: 1em;
    --font-size-medium: .7em;
@@ -33,9 +35,10 @@
 
 .cantonese {
    --font-family-main: "Noto Sans TC";
+   --font-family-secondary: "Noto Sans TC";
    /*font-sizes*/
    --font-size-main: min(max(14px, 4vw), 22px);
-   --font-flow: 100%/1.618;
+   --line-height:  1.618;
    --font-size-large: 1.5em;
    --font-size-normal: 1em;
    --font-size-medium: .7em;
@@ -44,42 +47,50 @@
 
 .korean {
    --font-family-main: "Nanum Gothic";
+   --font-family-secondary: "Nanum Gothic";
    /*font-sizes*/
-   --font-size-main: min(max(14px, 4vw), 22px);
-   --font-flow: 100%/1.618;
-   --font-size-large: 1.5em;
+   --font-size-main: min(max(14px, 3vw), 22px);
+   --line-height:  1.618;
+   --font-size-large: 1.4em;
    --font-size-normal: 1em;
-   --font-size-medium: .7em;
+   --font-size-medium: .9em;
    --font-size-small: .6em;
+}
+.korean .wrapper {
+    width: 80%;
 }
 
 .uyghur {
    --font-family-main: "Alpida Unicode System";
+   --font-family-secondary: "Alpida Unicode System";
    /*font-sizes*/
    --font-size-main: min(max(14px, 4vw), 22px);
-   --font-flow: 100%/1.618;
+   --line-height:  1.618;
    --font-size-large: 1.5em;
    --font-size-normal: 1em;
    --font-size-medium: .7em;
    --font-size-small: .6em;
+   direction: rtl;
 }
 
 .lao {
    --font-family-main: "Saysettha OT";
+   --font-family-secondary:  "Saysettha OT";
    /*font-sizes*/
    --font-size-main: min(max(14px, 4vw), 22px);
-   --font-flow: 100%/1.618;
+   --line-height:  1.618;
    --font-size-large: 1.5em;
    --font-size-normal: 1em;
-   --font-size-medium: .7em;
-   --font-size-small: .6em;
+   --font-size-medium: .9em;
+   --font-size-small: .65em;
 }
 
 .vietnamese {
    --font-family-main: 'Roboto';
+   --font-family-secondary:  'Roboto';
    /*font-sizes*/
    --font-size-main: min(max(14px, 4vw), 22px);
-   --font-flow: 100%/1.618;
+   --line-height:  1.618;
    --font-size-large: 1.5em;
    --font-size-normal: 1em;
    --font-size-medium: .7em;
@@ -88,9 +99,10 @@
 
 .tibetan {
    --font-family-main: 'Monlam Uni Ouchan2';
+   --font-family-secondary:  'Monlam Uni Ouchan2';
    /*font-sizes*/
-   --font-size-main: min(max(14px, 4vw), 22px);
-   --font-flow: 100%/1.618;
+   --font-size-main: min(max(28px, 4vw), 32px);
+   --line-height:  1.618;
    --font-size-large: 1.5em;
    --font-size-normal: 1em;
    --font-size-medium: .7em;
@@ -99,10 +111,11 @@
 
 .khmer {
    --font-family-main: "Hanuman";
+   --font-family-secondary:  "Hanuman";
    /*font-sizes*/
    --font-size-main: min(max(14px, 4vw), 22px);
-   --font-flow: 100%/1.618;
-   --font-size-large: 1.5em;
+   --line-height:  1.618;
+   --font-size-large: 1.4em;
    --font-size-normal: 1em;
    --font-size-medium: .7em;
    --font-size-small: .6em;
@@ -110,14 +123,18 @@
 
 .burmese {
    --font-family-main: "Pyidaungsu";
+   --font-family-secondary: "Pyidaungsu Numbers", "Pyidaungsu";
    /*font-sizes*/
-   --font-size-main: min(max(14px, 4vw), 22px);
-   --font-flow: 100%/1.618;
+   --font-size-main: min(max(12px, 4vw), 20px);
+   --line-height:  1.4;
    --font-size-large: 1.5em;
    --font-size-normal: 1em;
-   --font-size-medium: .7em;
+   --font-size-medium: 1em;
    --font-size-small: .6em;
+
 }
+
+/*global styles*/
 
 html {
    font-size: var(--font-size-main);
@@ -132,6 +149,8 @@ body {
    font-family: var(--font-family-main) !important;
    font: var(--font-flow);
    max-width: 420px;
+   line-height: var(--line-height);
+   font-weight: 500;
 }
 
 body, html {
@@ -158,6 +177,7 @@ h6 {
    font-size: var(--font-size-small);
    font-weight: 400;
    text-align: center;
+   margin-bottom: 0;
 }
 
 p {
@@ -192,124 +212,185 @@ section {
    justify-content: space-evenly;
    scroll-snap-align: start;
 }
-
+/*to fit xsmall screens*/
 @media screen and (max-width: 320px) {
    .text {
-      font-size: .9em!important;
-      margin:1em .9em 0 0!important;
-      padding-inline-start: 15px;
+      font-size: .9em !important;
+      margin: 1.7em .9em 0 0 !important;
+      padding-inline-start: 20px;
+   }
+   .text li {
+      margin: .5em!important;
    }
 
    figure.gif {
-      margin-top: -1em!important;
+      margin-top: -1.4em !important;
    }
 
    a.btn {
-      margin: .5em auto!important;
+      margin: .5em auto !important;
+   }
+
+   .khmer h1 {
+      font-size: 1.2em;
    }
 }
-   #section1 {
-      text-align: center;
-      margin-top: 0;
-      margin-bottom: 0;
-      padding-top: 0;
-      justify-content: space-between;
+
+#section1 {
+   text-align: center;
+   margin-top: 0;
+   margin-bottom: 0;
+   padding-top: 0;
+   justify-content: space-between;
+}
+
+figure.gif {
+   z-index: -20;
+   margin-top: -1em;
+}
+
+.gif_bcg {
+   background-image: radial-gradient(circle, #e7e7e7, #dddddd, #d3d3d3, #c9c9c9, #bfbfbf);
+   width: 100%;
+   max-height: 40vh;
+   margin-top: 2em;
+   min-width: 320px;
+}
+
+#logo {
+   width: 25px;
+   height: 25px;
+   text-align: left;
+   margin-top: .75rem;
+   margin-bottom: 0;
+   border: 0;
+}
+
+#img1 {
+   max-height: 55vh;
+}
+
+.wrapper {
+   margin: 0 auto;
+   width: 75%;
+   font-weight: 300;
+   display: inline;
+}
+
+/*btn*/
+a.btn {
+   width: 45%;
+   max-width: 300px;
+   max-height: 20px;
+   padding: .5rem 1rem;
+   margin: 1.75em 1em .5em 1em;
+   color: white;
+   background-color: var(--color-rfa-green);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border: 2px solid var(--color-rfa-green);
+   border-radius: 4px;
+   transition: ease-in;
+   font-size: .75em;
+   font-weight: 700;
+   align-self: center;
+}
+
+a.btn:hover {
+   background-color: #FFFFFF;
+   color: var(--color-text);
+   border: 2px solid var(--color-rfa-green);
+}
+
+/*section head*/
+.icon {
+   margin: 7px;
+   height: 18px;
+   width: 18px;
+}
+
+.sectionhead {
+   margin-left: -7px;
+   background-color: #191B1A !important;
+   color: white;
+   width: fit-content(50%);
+   width: -moz-max-content;
+   /* Firefox/Gecko */
+   width: -webkit-max-content;
+   /* Chrome */
+   width: max-content;
+   width: 50%;
+   inline-size: max-content;
+   padding: 1em 1.5em;
+   transform: translateY(-50%);
+   display: flex;
+   flex-flow: row nowrap;
+   align-items: baseline;
+   justify-content: center;
+   margin: 0 auto;
+   text-align: center;
+}
+
+.text {
+   font-family: var(--font-family-secondary);
+   font-size: var(--font-size-normal);
+   margin: 1.75rem 2rem 0 0;
+   max-height: 37vh;
+}
+
+.text li {
+   margin: .7rem;
+   line-height: var(--line-height);
+}
+
+#install {
+   margin-bottom: 15px;
+}
+
+/*scroll cue*/
+#scroll span {
+   position: relative;
+   display: block;
+   left: 50%;
+   width: 15px;
+   height: 15px;
+   margin-left: -12px;
+   border-left: 1px solid #333333;
+   border-bottom: 1px solid #333333;
+   -webkit-transform: rotate(-45deg);
+   transform: rotate(-45deg);
+   -webkit-animation: sdb04 1s infinite;
+   animation: sdb04 2s infinite;
+   -webkit-animation-iteration-count: 2;
+   -webkit-animation-fill-mode: forwards;
+   box-sizing: border-box;
+}
+
+@-webkit-keyframes sdb04 {
+   0% {
+      -webkit-transform: rotate(-45deg) translate(0, 0);
    }
 
-   figure.gif {
-      z-index: -20;
-      margin-top: 0;
+   20% {
+      -webkit-transform: rotate(-45deg) translate(-3px, 3px);
    }
 
-   .gif_bcg {
-      background-image: radial-gradient(circle, #e7e7e7, #dddddd, #d3d3d3, #c9c9c9, #bfbfbf);
-      width: 100%;
-      max-height: 40vh;
-      margin-top: 2em;
-      min-width: 320px;
+   40% {
+      -webkit-transform: rotate(-45deg) translate(0, 0);
+   }
+}
+
+@keyframes sdb04 {
+   0% {
+      transform: rotate(-45deg) translate(0, 0);
    }
 
-   #logo {
-      width: 25px;
-      height: 25px;
-      text-align: left;
-      margin-top: .75rem;
-      margin-bottom: 0;
-      border: 0;
+   20% {
+      transform: rotate(-45deg) translate(-3px, 3px);
    }
 
-   #img1 {
-      max-height: 55vh;
+   40% {
+      transform: rotate(-45deg) translate(0, 0);
    }
-
-   .wrapper {
-      margin: 0 auto;
-      width: 80%;
-      font-weight: 300;
-      display: inline;
-   }
-
-   /*btn*/
-   a.btn {
-      width: 45%;
-      max-width: 300px;
-      max-height: 20px;
-      padding: .5rem 1rem;
-      margin: 1.5em auto;
-      color: white;
-      background-color: var(--color-rfa-green);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border: 2px solid var(--color-rfa-green);
-      border-radius: 4px;
-      transition: ease-in;
-      font-size: .75em;
-      font-weight: 700;
-   }
-
-   a.btn:hover {
-      background-color: #FFFFFF;
-      color: var(--color-text);
-      border: 2px solid var(--color-rfa-green);
-   }
-
-   /*section head*/
-   .icon {
-      margin-left: -.5rem;
-      margin-right: .5rem;
-      height: 18px;
-      width: 18px;
-   }
-
-   .sectionhead {
-      background-color: #191B1A !important;
-      color: white;
-      width: fit-content(50%);
-      width: -moz-max-content;
-      /* Firefox/Gecko */
-      width: -webkit-max-content;
-      /* Chrome */
-      width: max-content;
-      width: 50%;
-      min-width: 150px;
-      height: auto;
-      padding: 1em 1.5em;
-      transform: translateY(-50%);
-      display: flex;
-      flex-flow: row nowrap;
-      align-items: baseline;
-      justify-content: center;
-      margin: 0 auto;
-   }
-
-   .text {
-      font-family: var(--font-family-secondary);
-      font-size: var(--font-size-normal);
-      margin: 1.75rem 2rem 0 0;
-      max-height: 35vh;
-   }
-
-   .text li {
-      margin: .7rem;
-   }
+}

@@ -2,7 +2,7 @@ const lang = {
    data() {
       return {
          latest_news: "Get the latest from RFA, anywhere.",
-         help_installing: "Need help installing for",
+         help_installing: "Need help installing for Android or iOS?",
          android_header: "For Android devices",
          android_1: "Click on the link below to open up the app in your browser",
          android_2: "Tap 'Add' when prompted to install the new RFA app to your home screen.",
