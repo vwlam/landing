@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
    <head>
       <title>App Landing Page</title>
       <link rel="stylesheet" type="text/css" href="style.css">
@@ -8,11 +9,14 @@
       <meta content="utf-8" http-equiv="encoding">
       <meta name="viewport" content="width=device-width, initial-scale=1">
    </head>
+
    <body>
       <div id="lang">
          <div class="scroll" :class="service">
             <section id="section1">
+
                <figure id="logo"><img src="./assets/icon.png" alt="" width="24" height="24"></figure>
+
                <figure><img id="img1" src="./assets/img1.png" alt="" width="267" height="456"></figure>
                <div class="wrapper">
                   <h1>{{ latest_news }}</h1>
@@ -21,16 +25,16 @@
                <div id="install">
                   <h6>{{ help_installing }}</h6>
                   <a id="scroll" href="#android">
-                  <span></span></a>
+                     <span></span></a>
                </div>
             </section>
             <section>
                <div id="android">
-
                   <div class="gif_bcg">
                      <h4 class="sectionhead"><img class="icon" src="./assets/icon-android.svg">
                         {{ android_header }}</h4>
-                     <figure class="gif"><img data-gifffer="./assets/android.gif" data-gifffer-height="75%"/></figure>
+
+                     <figure class="gif"><img data-gifffer="./assets/android.gif" data-gifffer-height="75%" /></figure>
                   </div>
                </div>
                <ol class="text">
@@ -43,7 +47,8 @@
                <div id="ios">
                   <div class="gif_bcg">
                      <h4 class="sectionhead"><img class="icon" src="./assets/icon-apple.svg">{{ apple_header }}</h4>
-                     <figure class="gif"><img data-gifffer="./assets/ios.gif" data-gifffer-height="70%"/></figure>
+
+                     <figure class="gif"><img data-gifffer="./assets/ios.gif" data-gifffer-height="70%" /></figure>
                   </div>
                </div>
                <ol class="text">
@@ -53,14 +58,13 @@
                   <li>{{ apple_4 }}</li>
                </ol>
                <a class="btn" :href="download">{{ go }}</a>
-
             </section>
          </div>
       </div>
       <script src="./js/translation.js"></script>
       <script type="text/javascript" src="./js/gifffer.min.js"></script>
       <script type="text/javascript">
-         window.onload = function () {
+         window.onload = function() {
             var gifs = Gifffer({
                playButtonStyles: {
                   'width': '60px',
@@ -86,8 +90,8 @@
          }
       </script>
       <script>
-         $(function () {
-            $('a[href*=#]').on('click', function (e) {
+         $(function() {
+            $('a[href*=#]').on('click', function(e) {
                e.preventDefault();
                $('html, body').animate({
                   scrollTop: $($(this).attr('href')).offset().top
@@ -96,4 +100,5 @@
          });
       </script>
    </body>
+
 </html>
